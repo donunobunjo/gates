@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -8,18 +8,23 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                   <h1> 
-                   if (session('status'))
+                    @if (session('status'))
                         <div class="alert alert-success">
-                             session
+                            {{ session('status') }}
+                           
                         </div>
-                    endif
-                    </h1>
+                        
+                    @endif
+
                     You are logged in!
                 </div>
+                <a href="{{ url('/home') }}">Home</a>
+                @can('editor')
+                <a href="{{ url('/about') }}">About</a>
+                @endcan
+                <a href="{{ url('/services') }}">Services</a>
             </div>
         </div>
     </div>
 </div>
 @endsection
-

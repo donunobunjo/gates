@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
+/*Route::get('/home', function () {
     return view('home');
+});*/
+Route::get('/about', function () {
+    return view('about');
+})->name('about')->middleware('can:editor');
+
+Route::get('/services', function () {
+    return view('services');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

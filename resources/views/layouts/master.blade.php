@@ -12,6 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <title>skool MAN | Starter</title>
   
+  
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -66,6 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </span>
         </div>
       </form>
+      
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
